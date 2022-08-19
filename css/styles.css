@@ -1,0 +1,378 @@
+
+
+:root {
+    --main-page: #FFFFFF;
+    --main-opacity: #FFFFFF60;
+    --text-items: #2196F3;
+    --element-hero: #2F303A;
+    --text-page: #000000;
+    --text-main: #212121;
+    --text-contacts: #757575;
+    --bcg-button: #F5F4FA;
+    --bcg-btn-hero: #188CE8;
+    --border-header: #ECECEC;
+    --border-portfolio: #EEEEEE;
+
+}
+h1, h2, h3, h4, p, ul, span {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+img {
+    display: block;
+}
+
+/* Курсор - рука (pointer) */
+.pointer {
+    cursor: pointer;
+}
+
+/* Робоча зона - контейнер*/
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Section - паддинги */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* OUTLINE */
+/*
+.container {
+    outline: 1px solid red ;
+} */
+
+
+/* Header - flex */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu, .header-contacts, .header-navigation {
+    display: flex;
+    align-items: center;
+}
+.header-menu, .header-contacts {
+    column-gap: 52px;
+}
+.header-navigation {
+    column-gap: 95px;
+}
+.header-container {
+    padding-top: 24px;
+    padding-bottom: 23px;
+}
+header {
+    border-bottom: 1px solid var(--border-header) ;
+}
+
+/* Hero - flex */
+.hero-modify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 214px;
+    padding-bottom: 199px ;
+}
+.button-central {
+    margin-top: 45px;
+}
+
+/* Секція Attention - flex */
+.attention-menu {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+}
+.attention-card {
+  width: calc((100%-3*30)/4);
+}
+
+/* Секція work - flex */
+.menu-foto {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.foto-work {
+    column-gap: 30px;
+}
+
+/* Секція team - flex */
+
+.menu-team {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.team-foto {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.employee {
+    margin-top: 30px;
+}
+.direction {
+    margin-top: 10px;
+}
+
+/* Портфоліо - flex */
+
+.menu-nav-porfolio {
+    display: flex;
+    justify-content: center;
+}
+.button-menu {
+    margin-right: 8px;
+}
+
+.menu-service {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+}
+/*
+.picture-portfolio, .tittle-portfolio {
+    outline: 1px solid red;
+}
+*/
+
+ 
+.picture-portfolio {
+    text-align: left;
+    padding-bottom: 0px;
+}
+.menu-portfolio, .service-name {
+    padding-left: 24px;
+}
+.menu-description {
+    border-left: 1px solid var(--border-portfolio);
+    border-bottom: 1px solid var(--border-portfolio);
+    border-right: 1px solid var(--border-portfolio);
+}
+.menu-portfolio {
+    padding-top: 20px;
+}
+.service-name {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* =====Сторінка - Студія =====*/
+/* Основні стилі - body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-page);
+    color: var(--text-main);
+}
+.navigation, .contacts, .menu,
+.menu-img, .menu-team, .menu-service {
+    list-style: none;
+}
+
+/* Logo - WebStudio */
+.logo {
+    font-family: 'Raleway';
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.24;
+}
+.first-title {
+    color: var(--text-items);
+}
+.second-title {
+    color: var(--text-page);
+}
+.third-title {
+    color: var(--main-page);
+}
+
+.item-contacts, .item-navigation, .logo {
+    text-decoration: none;
+}
+
+/* Кнопки навыгації*/
+.item-navigation {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-main);
+}
+
+.item-contacts {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-contacts);
+}
+
+.item-navigation:hover,
+.item-navigation:focus,
+.item-contacts:hover,
+.item-contacts:focus {
+    color: var(--text-items);
+}
+
+.item-navigation.current {
+    color: var(--text-items);
+}
+
+/* Секція - hero */
+.hero {
+    
+    background-color: var(--element-hero);
+    width: 100%;
+}
+.subject {
+    color: var(--main-page);
+    font-size: 44px;
+    line-height: 1.36;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+}
+.button-central {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.88;
+    font-weight: 700;
+    background-color: #2196F3;
+    color: var(--main-page) ;
+    border: var(--text-items);
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+}
+
+.button-central:hover,
+.button-central:focus {
+    color: var(--main-page);
+    background-color: var(--bcg-btn-hero);
+}
+
+/* Секція - опис */
+.description {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.announcement {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--text-contacts);
+}
+
+/* Секція - work */
+.sub-subject {
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+/* Секція - team */
+
+.employee {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+.direction {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--text-contacts);
+}
+
+/* Footer */
+.footer-nav {
+    background-color: var(--element-hero);
+}
+
+.adress {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    color: var(--main-page);
+}
+
+.mail,
+.number {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    color: var(--main-opacity);
+}
+
+
+
+/* Скриваємо заголовки */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+  
+/* ====== Сторінка - Портфоліо =====*/
+
+/* Стилі кнопок портфоліо*/
+.list-button:hover,
+.list-button:focus {
+    color: var(--main-page) ;
+    background-color: var(--text-items);
+}
+.list-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    color: var(--text-main);
+    background-color: var(--bcg-button);
+    border: var(--bcg-button);
+    border-radius: 4px;
+}
+.menu-portfolio {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--text-main);
+}
+.service-name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--text-contacts);
+}
