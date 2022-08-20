@@ -12,7 +12,7 @@
     --bcg-btn-hero: #188CE8;
     --border-header: #ECECEC;
     --border-portfolio: #EEEEEE;
-
+    --card-distance: 30px;
 }
 h1, h2, h3, h4, p, ul, span {
     margin-top: 0;
@@ -34,6 +34,7 @@ img {
 /* Робоча зона - контейнер*/
 .container {
     width: 1200px;
+    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -42,6 +43,7 @@ img {
     padding-top: 94px;
     padding-bottom: 94px;
 }
+
 
 /* OUTLINE */
 /*
@@ -80,11 +82,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 214px;
-    padding-bottom: 199px ;
+    padding-top: 200px;
+    padding-bottom: 200px ;
 }
 .button-central {
     margin-top: 45px;
+    padding: 10px 32px;
 }
 
 /* Секція Attention - flex */
@@ -93,9 +96,15 @@ header {
     column-gap: 30px;
     justify-content: space-between;
 }
+
+/* Сітка attention-card */
+
 .attention-card {
-  width: calc((100%-3*30)/4);
-}
+   width: calc((100%-3*30)/4);
+ }
+
+
+
 
 /* Секція work - flex */
 .menu-foto {
@@ -116,13 +125,6 @@ header {
 }
 .team-foto {
     text-align: center;
-    padding-bottom: 30px;
-}
-.employee {
-    margin-top: 30px;
-}
-.direction {
-    margin-top: 10px;
 }
 
 /* Портфоліо - flex */
@@ -130,42 +132,45 @@ header {
 .menu-nav-porfolio {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .button-menu {
     margin-right: 8px;
 }
 
+
+
+
+/* Сітка списку в портфоліо */ 
+
 .menu-service {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 30px;
+    margin-top: calc( -1 * var(--card-distance));
+    margin-left: calc( -1 * var(--card-distance));
 }
-/*
-.picture-portfolio, .tittle-portfolio {
-    outline: 1px solid red;
+.menu-service > .picture-portfolio {
+    flex-basis: calc(100%/3 - var(--card-distance));
+    margin-left: var(--card-distance);
+    margin-top: var(--card-distance);
 }
-*/
+
+
+
 
  
 .picture-portfolio {
     text-align: left;
     padding-bottom: 0px;
 }
-.menu-portfolio, .service-name {
-    padding-left: 24px;
-}
+
+
 .menu-description {
     border-left: 1px solid var(--border-portfolio);
     border-bottom: 1px solid var(--border-portfolio);
     border-right: 1px solid var(--border-portfolio);
+    padding: 20px 24px;
 }
-.menu-portfolio {
-    padding-top: 20px;
-}
-.service-name {
-    margin-bottom: 20px;
-}
-
 
 
 
@@ -233,9 +238,7 @@ body {
 
 /* Секція - hero */
 .hero {
-    
     background-color: var(--element-hero);
-    width: 100%;
 }
 .subject {
     color: var(--main-page);
@@ -288,8 +291,15 @@ body {
     letter-spacing: 0.03em;
     text-align: center;
 }
+.work {
+    padding-top: 0;
+}
 
 /* Секція - team */
+
+.team {
+    background-color: var(--bcg-button);
+}
 
 .employee {
     font-size: 16px;
@@ -304,10 +314,21 @@ body {
     letter-spacing: 0.03em;
     color: var(--text-contacts);
 }
+.team-members {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.employee {
+    margin-bottom: 10px;
+}
 
 /* Footer */
 .footer-nav {
     background-color: var(--element-hero);
+    padding: 60px 0 60px 215px;
+}
+.footer-contacts {
+    margin-top: 20px;
 }
 
 .adress {
@@ -325,6 +346,10 @@ body {
     letter-spacing: 0.03em;
     font-weight: 400;
     color: var(--main-opacity);
+}
+
+.footer-item-contacts:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 
@@ -361,6 +386,10 @@ body {
     background-color: var(--bcg-button);
     border: var(--bcg-button);
     border-radius: 4px;
+    padding: 6px 22px;
+}
+.first {
+    padding: 6px 25px;
 }
 .menu-portfolio {
     font-weight: 700;
@@ -375,4 +404,5 @@ body {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--text-contacts);
+    margin-top: 4px;
 }
