@@ -13,6 +13,7 @@
     --border-header: #ECECEC;
     --border-portfolio: #EEEEEE;
     --card-distance: 30px;
+    --card-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3)
 }
 h1, h2, h3, h4, p, ul, span {
     margin-top: 0;
@@ -37,6 +38,7 @@ img {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    /* outline: 2px solid red; */
 }
 /* Section - паддинги */
 .section {
@@ -79,14 +81,17 @@ header {
 
 /* Hero - flex */
 .hero-modify {
+    padding-bottom: 200px ;
+    background-color: var(--element-hero);
+}
+.hero-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 200px;
-    padding-bottom: 200px ;
 }
+
 .button-central {
-    margin-top: 45px;
+    margin-top: 30px;
     padding: 10px 32px;
 }
 
@@ -110,7 +115,6 @@ header {
 .menu-foto {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
 }
 .foto-work {
     column-gap: 30px;
@@ -121,10 +125,13 @@ header {
 .menu-team {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
 }
 .team-foto {
     text-align: center;
+    background-color: var(--main-page);
+    border-radius: 0 0 4px 4px;
+    box-shadow: var(--card-shadow);
+    width: calc((100%-3*30)/4);
 }
 
 /* Портфоліо - flex */
@@ -237,9 +244,6 @@ body {
 }
 
 /* Секція - hero */
-.hero {
-    background-color: var(--element-hero);
-}
 .subject {
     color: var(--main-page);
     font-size: 44px;
@@ -248,7 +252,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.06em;
-
+    margin-top: 200px;
 }
 .button-central {
     font-family: 'Roboto', sans-serif;
@@ -260,6 +264,7 @@ body {
     border: var(--text-items);
     letter-spacing: 0.06em;
     border-radius: 4px;
+    text-align: center;
 }
 
 .button-central:hover,
@@ -290,6 +295,7 @@ body {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 50px;
 }
 .work {
     padding-top: 0;
@@ -324,11 +330,14 @@ body {
 
 /* Footer */
 .footer-nav {
-    background-color: var(--element-hero);
-    padding: 60px 0 60px 215px;
+    
 }
 .footer-contacts {
     margin-top: 20px;
+}
+.footer {
+    background-color: var(--element-hero);
+    padding: 60px 0 60px 0;
 }
 
 .adress {
