@@ -173,7 +173,11 @@ header {
     margin-right: 8px;
 }
 
-.picture-portfolio:hover {
+.cards-portfolio {
+    display: block;
+}
+.cards-portfolio:hover,
+.cards-portfolio:focus {
     box-shadow: var(--portfolio-shadow);
 }
 
@@ -241,7 +245,7 @@ body {
     color: var(--main-page);
 }
 
-.item-contacts, .item-navigation, .logo, .item-portfolio {
+.item-contacts, .item-navigation, .logo, .cards-portfolio {
     text-decoration: none;
 }
 
@@ -408,7 +412,7 @@ body {
 .logo-customers {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 94px;
+    gap: 30px;
 }
 
 .icon-clients-link {
@@ -559,9 +563,7 @@ body {
     border-radius: 4px;
     padding: 6px 22px;
 }
-.item-portfolio {
-    display: block;
-}
+
 .first {
     padding: 6px 25px;
 }
