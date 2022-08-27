@@ -18,9 +18,12 @@
     --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
-     --portfolio-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    --portfolio-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
          0px 4px 4px rgba(0, 0, 0, 0.06),
          1px 4px 6px rgba(0, 0, 0, 0.16);
+    --shadow-button: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 h1, h2, h3, h4, p, ul, span {
     margin-top: 0;
@@ -89,7 +92,7 @@ header {
 .item-contacts {
     display: flex;
     align-items: center;
-    padding: 1px;
+    padding: 1px; 
 } 
 
 .icon-header {
@@ -97,21 +100,15 @@ header {
     fill: currentColor;
 }
 
-/* Hero - flex */
-/* .hero-modify {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-color: var(--element-hero);
-}
-*/
-
-.hero-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/Img-hero.jpg);
+.hero {
+    padding: 200px 0;
+    width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-hero.jpg);
 }
 
 .button-central {
@@ -130,6 +127,10 @@ header {
 .attention-card {
    width: calc((100% - 3 * 30px)/4);
  }
+
+
+
+
 
  .icon-antenna {
     width: 70px;
@@ -240,7 +241,7 @@ body {
     color: var(--main-page);
 }
 
-.item-contacts, .item-navigation, .logo {
+.item-contacts, .item-navigation, .logo, .item-portfolio {
     text-decoration: none;
 }
 
@@ -321,7 +322,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
-    width: 270px;
     height: 120px;
     border-radius: 4px;
     background-color: var(--bcg-button);
@@ -392,7 +392,7 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: var(--icon-social);
+    background-color: var(--main-page);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -410,11 +410,11 @@ body {
     justify-content: space-between;
     padding-bottom: 94px;
 }
+
 .icon-clients-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
     height: 92px;
     border-radius: 4px;
     border:1px solid var(--icon-social);
@@ -425,16 +425,21 @@ body {
     height: 60px;
     fill: var(--icon-social)
 }
-.icon-clients-link:hover {
+.icon-clients-link:hover,
+.icon-clients-link:focus {
     border: 1px solid var(--text-items);
 }
-.icon-clients-link:hover .icon-client-logo {
+.icon-clients-link:hover .icon-client-logo, 
+.icon-clients-link:focus .icon-client-logo {
     fill: var(--text-items);
 }
 .regular-customers {
     margin-top: 94px;
 }
 
+ .icon-clients {
+    width: calc((100% - 5 * 30px)/6);
+ }
 
 
 /* Footer */
@@ -486,10 +491,6 @@ body {
     padding-bottom: 30px;
  }
 
- .social-list-icon {
-    fill: var(--main-page);
- }
-
 .footer-nav, .footer-social {
     display: inline-block;
 }
@@ -504,6 +505,9 @@ body {
     margin-top: 12px;
 }
 
+.icon-footer {
+    fill: var(--main-page);
+}
 .social-link-footer {
     display: flex;
     align-items: center;
@@ -541,6 +545,7 @@ body {
 .list-button:focus {
     color: var(--main-page) ;
     background-color: var(--text-items);
+    box-shadow: var(--shadow-button);
 }
 .list-button {
     font-family: 'Roboto', sans-serif;
@@ -553,6 +558,9 @@ body {
     border: var(--bcg-button);
     border-radius: 4px;
     padding: 6px 22px;
+}
+.item-portfolio {
+    display: block;
 }
 .first {
     padding: 6px 25px;
